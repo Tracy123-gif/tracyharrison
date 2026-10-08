@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tracy Harrison | Marketing &amp; Audience Building</title>
+<meta name="description" content="Tracy Harrison is a marketer focused on building audiences, funnels, and the relationships behind them.">
+<meta property="og:title" content="Tracy Harrison | Marketing &amp; Audience Building">
+<meta property="og:description" content="Audiences, funnels, and the relationships behind them.">
+<meta property="og:type" content="website">
+<style>
+  :root {
+    --bg: #faf8f5;
+    --ink: #17151a;
+    --muted: #6b6672;
+    --accent: #c4452d;
+    --card: #ffffff;
+    --line: #e7e2da;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #111014;
+      --ink: #f3efe9;
+      --muted: #a29ca9;
+      --accent: #ff7a5c;
+      --card: #1a181e;
+      --line: #2b2830;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+  header.nav {
+    position: sticky; top: 0; z-index: 10;
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; }
+  .logo { font-family: Georgia, "Times New Roman", serif; font-weight: 700; font-size: 1.15rem; color: var(--ink); text-decoration: none; }
+  .nav nav a { color: var(--muted); text-decoration: none; margin-left: 20px; font-size: .95rem; }
+  .nav nav a:hover { color: var(--ink); }
+  .hero { padding: 96px 0 72px; }
+  .eyebrow { color: var(--accent); font-weight: 600; letter-spacing: .08em; text-transform: uppercase; font-size: .8rem; }
+  h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.4rem, 7vw, 4.4rem);
+    line-height: 1.05; margin: 14px 0 20px; letter-spacing: -0.02em;
+  }
+  .lede { font-size: clamp(1.05rem, 2.4vw, 1.3rem); color: var(--muted); max-width: 620px; }
+  .btns { margin-top: 32px; display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn {
+    display: inline-block; padding: 12px 22px; border-radius: 999px;
+    font-weight: 600; text-decoration: none; border: 1px solid var(--ink);
+  }
+  .btn.primary { background: var(--ink); color: var(--bg); }
+  .btn.ghost { color: var(--ink); }
+  .btn:hover { transform: translateY(-1px); }
+  section { padding: 64px 0; border-top: 1px solid var(--line); }
+  h2 { font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.7rem, 4vw, 2.3rem); margin: 0 0 24px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 24px; }
+  .card h3 { margin: 0 0 8px; font-size: 1.1rem; }
+  .card p { margin: 0; color: var(--muted); }
+  .about p { max-width: 680px; color: var(--muted); font-size: 1.08rem; }
+  .about p strong { color: var(--ink); }
+  .contact { text-align: center; }
+  .contact p { color: var(--muted); max-width: 520px; margin: 0 auto 28px; }
+  .socials { margin-top: 28px; display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+  .socials a { color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--line); }
+  .socials a:hover { color: var(--accent); }
+  footer { padding: 32px 0 48px; text-align: center; color: var(--muted); font-size: .9rem; border-top: 1px solid var(--line); }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top">Tracy Harrison</a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#work">Focus</a>
+      <a href="#contact">Connect</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <div class="eyebrow">Marketing &amp; audience building</div>
+    <h1>Audiences are built on relationships.</h1>
+    <p class="lede">I'm Tracy Harrison. I help people and brands reach the right audience through smart funnels, strong positioning, and genuine connections.</p>
+    <div class="btns">
+      <a class="btn primary" href="#contact">Let's connect</a>
+      <a class="btn ghost" href="#work">What I focus on</a>
+    </div>
+  </div>
+
+  <section id="about" class="about">
+    <div class="wrap">
+      <h2>About</h2>
+      <p>Marketing is more than running campaigns. It is <strong>access</strong>: to an audience, to the channels that reach them, and to the people who open doors. I put my energy into understanding all three.</p>
+      <p>I'm building a network across industries, learning what makes audiences pay attention, and turning that into work that gets results. If you care about growth that lasts, we'll get along.</p>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="wrap">
+      <h2>Focus areas</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Audience building</h3>
+          <p>Finding the right people, earning their attention, and keeping it.</p>
+        </div>
+        <div class="card">
+          <h3>Funnels &amp; links</h3>
+          <p>Mapping the path from first impression to real relationship and result.</p>
+        </div>
+        <div class="card">
+          <h3>Networking &amp; partnerships</h3>
+          <p>Connecting with creators, founders, and marketers worth collaborating with.</p>
+        </div>
+        <div class="card">
+          <h3>Personal brand</h3>
+          <p>Turning a clear point of view into a presence people remember and trust.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <h2>Let's connect</h2>
+      <p>Working on something, or just want to talk marketing? Reach out. I read every message.</p>
+      <!-- TODO: replace with your real contact email -->
+      <a class="btn primary" href="mailto:hello@example.com">Send an email</a>
+      <div class="socials">
+        <!-- TODO: replace # with your real profile links -->
+        <a href="#">LinkedIn</a>
+        <a href="#">Instagram</a>
+        <a href="#">X</a>
+        <a href="#">TikTok</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">&copy; <span id="y">2026</span> Tracy Harrison</div>
+</footer>
+
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>

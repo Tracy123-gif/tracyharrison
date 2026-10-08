@@ -5,157 +5,164 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tracy Harrison | Marketing &amp; Audience Building</title>
 <meta name="description" content="Tracy Harrison is a marketer focused on building audiences, funnels, and the relationships behind them.">
-<meta property="og:title" content="Tracy Harrison | Marketing &amp; Audience Building">
-<meta property="og:description" content="Audiences, funnels, and the relationships behind them.">
-<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #faf8f5;
-    --ink: #17151a;
-    --muted: #6b6672;
-    --accent: #c4452d;
-    --card: #ffffff;
-    --line: #e7e2da;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #111014;
-      --ink: #f3efe9;
-      --muted: #a29ca9;
-      --accent: #ff7a5c;
-      --card: #1a181e;
-      --line: #2b2830;
-    }
+    --bg: #f5eee3;
+    --ink: #1b1416;
+    --muted: #6e6166;
+    --crimson: #9b1229;
+    --card: #fffaf2;
+    --line: #e4dacb;
   }
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--ink);
-    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-    line-height: 1.6;
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: "Poppins", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    line-height: 1.5; overflow-x: hidden;
   }
-  .wrap { max-width: 960px; margin: 0 auto; padding: 0 20px; }
-  header.nav {
-    position: sticky; top: 0; z-index: 10;
-    background: color-mix(in srgb, var(--bg) 88%, transparent);
-    backdrop-filter: blur(8px);
-    border-bottom: 1px solid var(--line);
+  .wrap { max-width: 1240px; margin: 0 auto; padding: 0 28px; }
+
+  /* nav */
+  .nav .wrap { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; height: 76px; }
+  .logo { font-weight: 800; font-size: 1.15rem; color: var(--ink); text-decoration: none; letter-spacing: -.01em; }
+  .logo span { color: var(--crimson); }
+  .nav nav { display: flex; gap: 32px; }
+  .nav nav a { color: var(--ink); text-decoration: none; font-size: .85rem; font-weight: 500; }
+  .nav nav a:hover { color: var(--crimson); }
+  .pill-btn {
+    justify-self: end; background: var(--ink); color: var(--bg); text-decoration: none;
+    font-size: .8rem; font-weight: 600; padding: 10px 20px; border-radius: 999px;
   }
-  .nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; }
-  .logo { font-family: Georgia, "Times New Roman", serif; font-weight: 700; font-size: 1.15rem; color: var(--ink); text-decoration: none; }
-  .nav nav a { color: var(--muted); text-decoration: none; margin-left: 20px; font-size: .95rem; }
-  .nav nav a:hover { color: var(--ink); }
-  .hero { padding: 96px 0 72px; }
-  .eyebrow { color: var(--accent); font-weight: 600; letter-spacing: .08em; text-transform: uppercase; font-size: .8rem; }
+  .pill-btn:hover { background: var(--crimson); }
+
+  /* info row */
+  .info { display: grid; grid-template-columns: 1fr 1fr 1fr; align-items: start; padding: 28px 0 8px; font-weight: 600; font-size: 1.05rem; }
+  .info div:nth-child(2) { text-align: center; }
+  .info div:nth-child(3) { text-align: right; }
+
+  /* big name */
   h1 {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(2.4rem, 7vw, 4.4rem);
-    line-height: 1.05; margin: 14px 0 20px; letter-spacing: -0.02em;
+    margin: 0; font-weight: 800; letter-spacing: -0.055em; line-height: .95;
+    font-size: clamp(3rem, 12.4vw, 10.6rem); text-align: center; white-space: nowrap;
+    padding: 12px 0 28px;
   }
-  .lede { font-size: clamp(1.05rem, 2.4vw, 1.3rem); color: var(--muted); max-width: 620px; }
-  .btns { margin-top: 32px; display: flex; gap: 12px; flex-wrap: wrap; }
-  .btn {
-    display: inline-block; padding: 12px 22px; border-radius: 999px;
-    font-weight: 600; text-decoration: none; border: 1px solid var(--ink);
+
+  /* photo frame */
+  .frame {
+    position: relative; background: var(--card); border-radius: 28px; padding: 28px;
+    box-shadow: 0 1px 0 var(--line);
   }
-  .btn.primary { background: var(--ink); color: var(--bg); }
-  .btn.ghost { color: var(--ink); }
-  .btn:hover { transform: translateY(-1px); }
-  section { padding: 64px 0; border-top: 1px solid var(--line); }
-  h2 { font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.7rem, 4vw, 2.3rem); margin: 0 0 24px; }
-  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
-  .card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 24px; }
-  .card h3 { margin: 0 0 8px; font-size: 1.1rem; }
-  .card p { margin: 0; color: var(--muted); }
-  .about p { max-width: 680px; color: var(--muted); font-size: 1.08rem; }
-  .about p strong { color: var(--ink); }
-  .contact { text-align: center; }
-  .contact p { color: var(--muted); max-width: 520px; margin: 0 auto 28px; }
-  .socials { margin-top: 28px; display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
-  .socials a { color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--line); }
-  .socials a:hover { color: var(--accent); }
-  footer { padding: 32px 0 48px; text-align: center; color: var(--muted); font-size: .9rem; border-top: 1px solid var(--line); }
+  .frame::before, .frame::after, .frame i::before, .frame i::after {
+    content: ""; position: absolute; width: 12px; height: 12px; border-radius: 50%;
+    border: 1.5px solid var(--line); background: var(--bg);
+  }
+  .frame::before { top: 14px; left: 14px; }
+  .frame::after { top: 14px; right: 14px; }
+  .frame i::before { bottom: 14px; left: 14px; }
+  .frame i::after { bottom: 14px; right: 14px; }
+  .photo { border-radius: 999px; overflow: hidden; aspect-ratio: 1.95 / 1; background: var(--crimson); }
+  .photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 38%; display: block; }
+
+  /* about */
+  .about { text-align: center; padding: 96px 0 72px; }
+  .tag {
+    display: inline-flex; gap: 10px; align-items: center; background: var(--card);
+    border-radius: 999px; padding: 6px 18px; font-size: .7rem; font-weight: 500; letter-spacing: .04em; text-transform: uppercase;
+  }
+  .tag b { width: 5px; height: 5px; background: var(--crimson); border-radius: 50%; }
+  .about p {
+    max-width: 760px; margin: 28px auto 0; font-weight: 500;
+    font-size: clamp(1.15rem, 2.4vw, 1.6rem); line-height: 1.35; letter-spacing: -.01em;
+  }
+  .about p em { font-style: normal; color: var(--crimson); }
+
+  /* strip */
+  .strip { overflow: hidden; padding: 8px 0 72px; }
+  .track { display: flex; gap: 16px; width: max-content; animation: slide 40s linear infinite; }
+  .track img { height: 200px; width: 150px; object-fit: cover; border-radius: 14px; display: block; }
+  .track img:nth-child(even) { width: 190px; }
+  @keyframes slide { to { transform: translateX(calc(-50% - 8px)); } }
+  @media (prefers-reduced-motion: reduce) { .track { animation: none; } }
+
+  footer { padding: 28px 0 44px; border-top: 1px solid var(--line); font-size: .85rem; color: var(--muted); }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+
+  @media (max-width: 720px) {
+    .wrap { padding: 0 16px; }
+    .nav nav { display: none; }
+    .nav .wrap { grid-template-columns: 1fr auto; }
+    .info { grid-template-columns: 1fr 1fr; font-size: .9rem; row-gap: 6px; }
+    .info div:nth-child(2) { text-align: right; }
+    .info div:nth-child(3) { display: none; }
+    h1 { white-space: normal; text-align: left; font-size: 4.2rem; }
+    .frame { padding: 14px; border-radius: 20px; }
+    .photo { aspect-ratio: 1 / 1; border-radius: 120px; }
+    .photo img { object-position: 50% 20%; }
+    .track img { height: 150px; width: 112px; }
+    .track img:nth-child(even) { width: 142px; }
+  }
 </style>
 </head>
 <body>
 
 <header class="nav">
   <div class="wrap">
-    <a class="logo" href="#top">Tracy Harrison</a>
+    <a class="logo" href="#top">Tracy<span>.</span>H</a>
     <nav>
-      <a href="#about">About</a>
-      <a href="#work">Focus</a>
-      <a href="#contact">Connect</a>
+      <a href="#top">Home</a>
+      <a href="#about">About me</a>
+      <a href="#work">Work</a>
+      <a href="#content">Content</a>
     </nav>
+    <a class="pill-btn" href="#contact">Contact &rarr;</a>
   </div>
 </header>
 
 <main id="top">
-  <div class="wrap hero">
-    <div class="eyebrow">Marketing &amp; audience building</div>
-    <h1>Audiences are built on relationships.</h1>
-    <p class="lede">I'm Tracy Harrison. I help people and brands reach the right audience through smart funnels, strong positioning, and genuine connections.</p>
-    <div class="btns">
-      <a class="btn primary" href="#contact">Let's connect</a>
-      <a class="btn ghost" href="#work">What I focus on</a>
+  <div class="wrap">
+    <div class="info">
+      <div>Hey there, I'm</div>
+      <div>Open to<br>collaborations</div>
+      <div>Working<br>worldwide</div>
     </div>
+
+    <h1>Tracy Harrison</h1>
+
+    <div class="frame">
+      <div class="photo"><img src="assets/tracy.jpg" alt="Portrait of Tracy Harrison"></div>
+      <i></i>
+    </div>
+
+    <section class="about" id="about">
+      <span class="tag">About me <b></b> About me</span>
+      <p>I'm a marketer who believes <em>audiences are built on relationships</em>. I focus on positioning, funnels, and the connections that open doors, helping people and brands get in front of the right audience and stay there.</p>
+    </section>
   </div>
 
-  <section id="about" class="about">
-    <div class="wrap">
-      <h2>About</h2>
-      <p>Marketing is more than running campaigns. It is <strong>access</strong>: to an audience, to the channels that reach them, and to the people who open doors. I put my energy into understanding all three.</p>
-      <p>I'm building a network across industries, learning what makes audiences pay attention, and turning that into work that gets results. If you care about growth that lasts, we'll get along.</p>
+  <div class="strip" id="work" aria-label="Selected work (placeholder images)">
+    <div class="track">
+      <img src="assets/strip-1.jpg" alt="">
+      <img src="assets/strip-2.jpg" alt="">
+      <img src="assets/strip-3.jpg" alt="">
+      <img src="assets/strip-4.jpg" alt="">
+      <img src="assets/strip-1.jpg" alt="">
+      <img src="assets/strip-2.jpg" alt="">
+      <img src="assets/strip-3.jpg" alt="">
+      <img src="assets/strip-4.jpg" alt="">
     </div>
-  </section>
-
-  <section id="work">
-    <div class="wrap">
-      <h2>Focus areas</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Audience building</h3>
-          <p>Finding the right people, earning their attention, and keeping it.</p>
-        </div>
-        <div class="card">
-          <h3>Funnels &amp; links</h3>
-          <p>Mapping the path from first impression to real relationship and result.</p>
-        </div>
-        <div class="card">
-          <h3>Networking &amp; partnerships</h3>
-          <p>Connecting with creators, founders, and marketers worth collaborating with.</p>
-        </div>
-        <div class="card">
-          <h3>Personal brand</h3>
-          <p>Turning a clear point of view into a presence people remember and trust.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="contact">
-    <div class="wrap">
-      <h2>Let's connect</h2>
-      <p>Working on something, or just want to talk marketing? Reach out. I read every message.</p>
-      <!-- TODO: replace with your real contact email -->
-      <a class="btn primary" href="mailto:hello@example.com">Send an email</a>
-      <div class="socials">
-        <!-- TODO: replace # with your real profile links -->
-        <a href="#">LinkedIn</a>
-        <a href="#">Instagram</a>
-        <a href="#">X</a>
-        <a href="#">TikTok</a>
-      </div>
-    </div>
-  </section>
+  </div>
 </main>
 
-<footer>
-  <div class="wrap">&copy; <span id="y">2026</span> Tracy Harrison</div>
+<footer id="contact">
+  <div class="wrap">
+    <span>&copy; <span id="y">2026</span> Tracy Harrison</span>
+    <span>Design preview, not live</span>
+  </div>
 </footer>
-
 <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
